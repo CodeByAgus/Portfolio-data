@@ -11,7 +11,6 @@ const Education: React.FC = () => {
           title: 'Licenciatura en Ciencia de Datos',
           institution: 'Universidad de Buenos Aires',
           year: '2024 - Actualidad',
-          link: 'https://www.uba.ar'
         }
       ]
     },
