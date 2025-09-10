@@ -10,7 +10,7 @@ const Education: React.FC = () => {
         {
           title: 'Licenciatura en Ciencia de Datos',
           institution: 'Universidad de Buenos Aires',
-          year: '2024 - Actualidad',
+          year: '2024 - Actualidad'
         }
       ]
     },
@@ -62,21 +62,25 @@ const Education: React.FC = () => {
     <section id="education" className="section">
       <div className="container">
         <h2 className="section-title">Educación & Certificaciones</h2>
-        
+
         <div className="max-w-4xl mx-auto space-y-12">
           {education.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-6">
               {/* Category Header */}
-              <div className="flex items-center gap-3 pb-4 border-b-2"
-                   style={{ borderColor: 'var(--light-sage)' }}>
+              <div
+                className="flex items-center gap-3 pb-4 border-b-2"
+                style={{ borderColor: 'var(--light-sage)' }}
+              >
                 <div style={{ color: 'var(--primary-green)' }}>
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold"
-                    style={{ 
-                      color: 'var(--primary-green)',
-                      fontFamily: 'var(--font-subtitle)'
-                    }}>
+                <h3
+                  className="text-xl font-semibold"
+                  style={{
+                    color: 'var(--primary-green)',
+                    fontFamily: 'var(--font-subtitle)'
+                  }}
+                >
                   {category.category}
                 </h3>
               </div>
@@ -84,21 +88,27 @@ const Education: React.FC = () => {
               {/* Items List */}
               <div className="space-y-4">
                 {category.items.map((item, itemIndex) => (
-                  <div key={itemIndex} 
-                       className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-lg transition-all duration-300 hover:shadow-md"
-                       style={{ background: 'var(--soft-lavender)' }}>
-                    
+                  <div
+                    key={itemIndex}
+                    className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-lg transition-all duration-300 hover:shadow-md"
+                    style={{ background: 'var(--soft-lavender)' }}
+                  >
                     {/* Left side - Title and Institution */}
                     <div className="flex-1">
-                      <h4 className="font-semibold text-lg mb-1"
-                          style={{ color: 'var(--dark-charcoal)' }}>
+                      <h4
+                        className="font-semibold text-lg mb-1"
+                        style={{ color: 'var(--dark-charcoal)' }}
+                      >
                         {item.title}
                       </h4>
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm">
                         <span style={{ color: 'var(--secondary-green)' }}>
                           {item.institution}
                         </span>
-                        <span className="hidden sm:inline" style={{ color: 'var(--secondary-green)' }}>
+                        <span
+                          className="hidden sm:inline"
+                          style={{ color: 'var(--secondary-green)' }}
+                        >
                           •
                         </span>
                         <span style={{ color: 'var(--secondary-green)' }}>
@@ -107,20 +117,24 @@ const Education: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Right side - Link */}
-                    <div className="flex-shrink-0">
-                      <a href={item.link}
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-lg"
-                         style={{ 
-                           background: 'var(--primary-green)',
-                           color: 'white'
-                         }}>
-                        <span>Ver certificado</span>
-                        <ExternalLink size={14} />
-                      </a>
-                    </div>
+                    {/* Right side - Link (solo si hay link) */}
+                    {item.link && (
+                      <div className="flex-shrink-0">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-lg"
+                          style={{
+                            background: 'var(--primary-green)',
+                            color: 'white'
+                          }}
+                        >
+                          <span>Ver certificado</span>
+                          <ExternalLink size={14} />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
