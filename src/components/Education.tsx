@@ -74,7 +74,7 @@ const Education: React.FC = () => {
                 
                 {/* Content */}
                 <div className="rounded-2xl p-6 shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl"
-                     style={{ background: 'white' }}>
+                     style={{ background: 'var(--cream)' }}>
                   <div className="font-semibold text-sm mb-3"
                        style={{ color: 'var(--primary-green)' }}>
                     {item.date}

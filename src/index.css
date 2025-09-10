@@ -42,23 +42,16 @@ body {
 
 .dark-mode {
   background: var(--dark-bg);
-  color: var(--dark-text);
+  color: var(--dark-muted);
 }
 
-.dark-mode {
+.dark {
   --cream: var(--dark-bg);
   --soft-lavender: var(--dark-surface);
   --primary-green: var(--dark-green);
   --secondary-green: var(--dark-accent);
-  --dark-charcoal: var(--dark-text);
-}
-
-.dark-mode {
-  --cream: var(--dark-bg);
-  --soft-lavender: var(--dark-surface);
-  --primary-green: var(--dark-green);
-  --secondary-green: var(--dark-accent);
-  --dark-charcoal: var(--dark-text);
+  --dark-charcoal: var(--dark-muted);
+  --light-sage: var(--dark-accent);
 }
 
 .container {

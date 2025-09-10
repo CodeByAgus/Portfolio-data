@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
                  rel="noopener noreferrer"
                  className="flex flex-col items-center p-5 rounded-2xl shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl min-w-28"
                  style={{ 
-                   background: 'white',
+                   background: 'var(--cream)',
                    color: 'var(--primary-green)'
                  }}>
                 <div className="mb-3">
