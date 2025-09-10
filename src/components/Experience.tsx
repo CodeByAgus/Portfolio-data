@@ -28,7 +28,7 @@ const Experience: React.FC = () => {
                   </div>
                   
                   <h3 className="text-2xl mb-2"
-                      style={{ color: 'var(--dark-charcoal)', fontFamily: 'var(--font-heading)' }}>
+                      style={{ color: 'var(--dark-charcoal)', fontFamily: 'var(--font-subtitle)' }}>
                     Senior Data Analyst
                   </h3>
                   

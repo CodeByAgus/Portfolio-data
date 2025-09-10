@@ -81,7 +81,7 @@ const Education: React.FC = () => {
                   </div>
                   
                   <h3 className="text-xl mb-2"
-                      style={{ color: 'var(--dark-charcoal)', fontFamily: 'var(--font-heading)' }}>
+                      style={{ color: 'var(--dark-charcoal)', fontFamily: 'var(--font-subtitle)' }}>
                     {item.title}
                   </h3>
                   

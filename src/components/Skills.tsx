@@ -73,7 +73,7 @@ const Skills: React.FC = () => {
                   className="text-lg font-bold mb-4"
                   style={{
                     color: 'var(--primary-green)',
-                    fontFamily: 'var(--font-heading)'
+                    fontFamily: 'var(--font-subtitle)'
                   }}
                 >
                   {skill.name}
