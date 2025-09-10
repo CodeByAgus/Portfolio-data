@@ -1,103 +1,132 @@
 import React from 'react';
+import { ExternalLink, Award, GraduationCap } from 'lucide-react';
 
 const Education: React.FC = () => {
   const education = [
     {
-      date: '2024 - Actualidad',
-      title: 'Licenciatura en Ciencia de Datos',
-      company: 'Universidad de Buenos Aires',
-      description: 'Carrera universitaria que combina matemáticas, estadística y programación para el análisis y modelado de datos. Formación sólida en pensamiento lógico, análisis crítico y resolución de problemas.'
+      category: 'Educación Universitaria',
+      icon: <GraduationCap size={20} />,
+      items: [
+        {
+          title: 'Licenciatura en Ciencia de Datos',
+          institution: 'Universidad de Buenos Aires',
+          year: '2024 - Actualidad',
+          link: 'https://www.uba.ar'
+        }
+      ]
     },
     {
-      date: '2025',
-      title: 'Google Data Analytics Professional Certificate',
-      company: 'Google / Coursera',
-      description: 'Certificación en análisis de datos que abarca SQL, R, Tableau y metodologías de análisis. Incluye prácticas de limpieza, validación y visualización de datos con enfoque en la toma de decisiones.'
-    },
-    {
-      date: '2025',
-      title: 'Testing QA Manual',
-      company: 'Coderhouse',
-      description: 'Formación en fundamentos de testing de software, diseño de casos de prueba, reporte de bugs y metodologías ágiles. Uso de Postman y herramientas colaborativas para asegurar calidad en proyectos.'
-    },
-    {
-      date: '2025',
-      title: 'Consultas Avanzadas con SQL',
-      company: 'Fundaula',
-      description: 'Capacitación en comprensión de estructuras de tablas, manejo de sentencias complejas y funciones agregadas como SUM, AVG y COUNT.'
-    },
-    {
-      date: '2025',
-      title: 'Programación Inicial con Python',
-      company: 'Talento Tech',
-      description: 'Curso enfocado en estructuras de control, programación estructurada, manejo de colecciones y bases de datos SQLite.'
-    },
-    {
-      date: '2025',
-      title: 'Curso Intensivo de Data Analytics',
-      company: 'Chicas en Tecnología',
-      description: 'Programa de 15 horas con enfoque en visualización de datos, lógica estadística y uso de herramientas como Power BI y Tableau.'
-    },
-    {
-      date: '2025',
-      title: 'Excel de Básico a Experto',
-      company: 'Udemy',
-      description: 'Formación en el uso avanzado de Excel: tablas dinámicas, funciones condicionales y de búsqueda, además de operaciones aritméticas aplicadas al análisis de datos.'
+      category: 'Certificaciones Profesionales',
+      icon: <Award size={20} />,
+      items: [
+        {
+          title: 'Google Data Analytics Professional Certificate',
+          institution: 'Google / Coursera',
+          year: '2025',
+          link: 'https://www.coursera.org/professional-certificates/google-data-analytics'
+        },
+        {
+          title: 'Testing QA Manual',
+          institution: 'Coderhouse',
+          year: '2025',
+          link: 'https://www.coderhouse.com'
+        },
+        {
+          title: 'Consultas Avanzadas con SQL',
+          institution: 'Fundaula',
+          year: '2025',
+          link: 'https://www.fundaula.com'
+        },
+        {
+          title: 'Programación Inicial con Python',
+          institution: 'Talento Tech',
+          year: '2025',
+          link: 'https://www.talentotech.gob.ar'
+        },
+        {
+          title: 'Curso Intensivo de Data Analytics',
+          institution: 'Chicas en Tecnología',
+          year: '2025',
+          link: 'https://www.chicasentecnologia.org'
+        },
+        {
+          title: 'Excel de Básico a Experto',
+          institution: 'Udemy',
+          year: '2025',
+          link: 'https://www.udemy.com'
+        }
+      ]
     }
   ];
 
   return (
-    <section id="education" className="section"
-             style={{ background: 'var(--soft-lavender)' }}>
+    <section id="education" className="section">
       <div className="container">
         <h2 className="section-title">Educación & Certificaciones</h2>
         
-        <div className="relative max-w-4xl mx-auto mt-10">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full hidden md:block"
-               style={{ background: 'var(--light-sage)' }}></div>
-          
-          <div className="space-y-8 md:space-y-0">
-            {education.map((item, index) => (
-              <div key={index} 
-                   className={`relative md:w-1/2 ${index % 2 === 0 ? 'md:pr-10' : 'md:pl-10 md:ml-auto'}`}>
-                
-                {/* Timeline dot */}
-                <div className={`absolute w-5 h-5 rounded-full z-10 hidden md:block ${
-                  index % 2 === 0 ? 'right-0 mr-2' : 'left-0 ml-2'
-                }`}
-                     style={{
-                       background: 'var(--primary-green)',
-                       top: '15px',
-                       transform: index % 2 === 0 ? 'translateX(50%)' : 'translateX(-50%)'
-                     }}></div>
-                
-                {/* Content */}
-                <div className="rounded-2xl p-6 shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl"
-                     style={{ background: 'var(--cream)' }}>
-                  <div className="font-semibold text-sm mb-3"
-                       style={{ color: 'var(--primary-green)' }}>
-                    {item.date}
-                  </div>
-                  
-                  <h3 className="text-xl mb-2"
-                      style={{ color: 'var(--dark-charcoal)', fontFamily: 'var(--font-subtitle)' }}>
-                    {item.title}
-                  </h3>
-                  
-                  <div className="font-semibold mb-4"
-                       style={{ color: 'var(--secondary-green)' }}>
-                    {item.company}
-                  </div>
-                  
-                  <p className="leading-relaxed text-sm"
-                     style={{ color: 'var(--dark-charcoal)' }}>
-                    {item.description}
-                  </p>
+        <div className="max-w-4xl mx-auto space-y-12">
+          {education.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="space-y-6">
+              {/* Category Header */}
+              <div className="flex items-center gap-3 pb-4 border-b-2"
+                   style={{ borderColor: 'var(--light-sage)' }}>
+                <div style={{ color: 'var(--primary-green)' }}>
+                  {category.icon}
                 </div>
+                <h3 className="text-xl font-semibold"
+                    style={{ 
+                      color: 'var(--primary-green)',
+                      fontFamily: 'var(--font-subtitle)'
+                    }}>
+                  {category.category}
+                </h3>
               </div>
-            ))}
-          </div>
+
+              {/* Items List */}
+              <div className="space-y-4">
+                {category.items.map((item, itemIndex) => (
+                  <div key={itemIndex} 
+                       className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-lg transition-all duration-300 hover:shadow-md"
+                       style={{ background: 'var(--soft-lavender)' }}>
+                    
+                    {/* Left side - Title and Institution */}
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-lg mb-1"
+                          style={{ color: 'var(--dark-charcoal)' }}>
+                        {item.title}
+                      </h4>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm">
+                        <span style={{ color: 'var(--secondary-green)' }}>
+                          {item.institution}
+                        </span>
+                        <span className="hidden sm:inline" style={{ color: 'var(--secondary-green)' }}>
+                          •
+                        </span>
+                        <span style={{ color: 'var(--secondary-green)' }}>
+                          {item.year}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Right side - Link */}
+                    <div className="flex-shrink-0">
+                      <a href={item.link}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-lg"
+                         style={{ 
+                           background: 'var(--primary-green)',
+                           color: 'white'
+                         }}>
+                        <span>Ver certificado</span>
+                        <ExternalLink size={14} />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
