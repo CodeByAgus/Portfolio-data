@@ -58,12 +58,12 @@ const Projects: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
           {projects.map((project, index) => (
             <div key={index} className="rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl"
-                 style={{ background: 'white' }}>
+                 style={{ background: 'var(--cream)' }}>
               
               <div className="text-white p-8 text-center"
                    style={{ background: 'linear-gradient(135deg, var(--primary-green), var(--secondary-green))' }}>
                 <div className="text-5xl mb-4">{project.icon}</div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'var(--font-subtitle)' }}>
                   {project.title}
                 </h3>
                 <p className="opacity-90 text-sm">{project.subtitle}</p>

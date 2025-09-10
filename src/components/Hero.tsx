@@ -25,8 +25,7 @@ const Hero: React.FC = () => {
         <h1 className="text-6xl mb-3"
             style={{ 
               color: 'var(--primary-green)', 
-              fontFamily: 'var(--font-heading)', 
-              fontStyle: 'italic' 
+              fontFamily: 'var(--font-heading)'
             }}>
           Agustina Ariana Mendoza
         </h1>

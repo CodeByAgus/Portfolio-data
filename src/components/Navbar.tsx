@@ -24,8 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
         <a href="#" className="text-2xl font-bold transition-colors duration-300"
            style={{ 
              color: 'var(--primary-green)', 
-             fontFamily: 'var(--font-heading)', 
-             fontStyle: 'italic' 
+             fontFamily: 'var(--font-heading)'
            }}>
           Agustina Mendoza
         </a>

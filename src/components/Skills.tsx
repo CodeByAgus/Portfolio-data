@@ -60,7 +60,7 @@ const Skills: React.FC = () => {
               <div
                 key={index}
                 className="rounded-xl p-4 shadow-md transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg text-center"
-                style={{ background: 'white' }}
+                style={{ background: 'var(--cream)' }}
               >
                 <div
                   className="flex justify-center mb-4"
@@ -73,7 +73,7 @@ const Skills: React.FC = () => {
                   className="text-lg font-bold mb-4"
                   style={{
                     color: 'var(--primary-green)',
-                    fontFamily: 'var(--font-heading)'
+                    fontFamily: 'var(--font-subtitle)'
                   }}
                 >
                   {skill.name}
