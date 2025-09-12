@@ -109,19 +109,22 @@ const Education: React.FC = () => {
                     </div>
 
                     {/* Right side - Link */}
-                    <div className="flex-shrink-0">
-                      <a href={item.link}
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-lg"
-                         style={{ 
-                           background: 'var(--primary-green)',
-                           color: 'white'
-                         }}>
-                        <span>Ver certificado</span>
-                        <ExternalLink size={14} />
-                      </a>
-                    </div>
+                    {/* Right side - Link (only for certifications) */}
+                    {category.category !== 'Educación Universitaria' && (
+                      <div className="flex-shrink-0">
+                        <a href={item.link}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-lg"
+                           style={{ 
+                             background: 'var(--primary-green)',
+                             color: 'white'
+                           }}>
+                          <span>Ver certificado</span>
+                          <ExternalLink size={14} />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
