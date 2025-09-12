@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
         </p>
         
         <p className="text-lg max-w-2xl mx-auto mb-10 opacity-80 leading-relaxed"
-           style={{ color: 'var(--dark-charcoal)' }}>
+           style={{ color: 'var(--charcoal-text)' }}>
           Estudiante de Ciencia de Datos en la Universidad de Buenos Aires, apasionada por transformar información en conocimiento útil.
            Me defino como una mente analítica con curiosidad constante, capaz de unir la lógica matemática con la creatividad para encontrar soluciones prácticas. 
           Mi meta es crecer dentro del mundo tecnológico, aportando valor a través del análisis, la visualización y la interpretación de datos.

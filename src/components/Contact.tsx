@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
         
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-lg mb-10 opacity-80"
-             style={{ color: 'var(--dark-charcoal)' }}>
+             style={{ color: 'var(--charcoal-text)' }}>
             Estoy siempre abierta a nuevos desafíos y oportunidades de colaboración. 
             Si tienes un proyecto emocionante o quieres charlar sobre datos y tecnología, no dudes en contactarme.
           </p>

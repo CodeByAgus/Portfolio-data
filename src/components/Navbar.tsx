@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
               <a href={link.href}
                  onClick={(e) => handleSmoothScroll(e, link.href)}
                  className="font-medium transition-colors duration-300 hover:opacity-80"
-                 style={{ color: 'var(--dark-charcoal)' }}>
+                 style={{ color: 'var(--charcoal-text)' }}>
                 {link.text}
               </a>
             </li>

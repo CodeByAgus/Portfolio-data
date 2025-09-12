@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
               
               <div className="p-8">
                 <p className="mb-5 leading-relaxed text-sm"
-                   style={{ color: 'var(--dark-charcoal)' }}>
+                   style={{ color: 'var(--charcoal-text)' }}>
                   {project.description}
                 </p>
                 

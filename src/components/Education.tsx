@@ -92,7 +92,7 @@ const Education: React.FC = () => {
                     {/* Left side - Title and Institution */}
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg mb-1"
-                          style={{ color: 'var(--dark-charcoal)' }}>
+                          style={{ color: 'var(--charcoal-text)' }}>
                         {item.title}
                       </h4>
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm">

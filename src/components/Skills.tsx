@@ -89,7 +89,7 @@ const Skills: React.FC = () => {
                         className="w-1.5 h-1.5 rounded-full mt-1 flex-shrink-0"
                         style={{ background: 'var(--secondary-green)' }}
                       ></span>
-                      <span style={{ color: 'var(--dark-charcoal)' }}>
+                      <span style={{ color: 'var(--charcoal-text)' }}>
                         {detail}
                       </span>
                     </li>

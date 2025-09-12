@@ -4,20 +4,22 @@
 
 :root {
   /* Paleta de colores principal */
-  --primary-green: #5F7E4D;
-  --secondary-green: #8B9A7A;
-  --light-sage: #D1D7BD;
-  --cream: #FFFCE2;
-  --soft-lavender: #F8F6F1;
-  --dark-charcoal: #242424;
+  --primary-green: #5F7E4D;      /* Verde tierra, fuerte */
+  --secondary-green: #8B9A7A;    /* Verde grisáceo */
+  --light-sage: #E3E9D7;         /* Verde muy claro, casi fondo */
+  --cream: #FFFDF7;              /* Fondo cálido */
+  --soft-lavender: #F5F2EC;      /* Neutro suave para secciones */
+  --charcoal-text: #1C1C1C;      /* Texto principal (alto contraste) */
+  --accent-yellow: #F2B705;      /* Toque de color para botones/links */
   
   /* Modo oscuro */
-  --dark-bg: #1A1A1A;
-  --dark-surface: #2A2A2A;
-  --dark-green: #7A9B68;
-  --dark-accent: #A8B897;
-  --dark-text: #161616;
-  --dark-muted: #B8B8B8;
+  --dark-bg: #121212;            /* Fondo profundo */
+  --dark-surface: #1E1E1E;       /* Tarjetas, bloques */
+  --dark-green: #7FA46B;         /* Verde más luminoso */
+  --dark-accent: #C7D6B5;        /* Verde pastel para contraste */
+  --dark-text: #F5F5F5;          /* Texto principal claro */
+  --dark-cream: #EAE6D9;         /* Detalles suaves */
+  --dark-accent-yellow: #FFD369; /* Botones/links llamativos */
   
   /* Tipografías */
   --font-heading: 'Bebas Neue', sans-serif;
@@ -36,14 +38,14 @@
 body {
   font-family: var(--font-body);
   line-height: 1.6;
-  color: var(--dark-charcoal);
+  color: var(--charcoal-text);
   background: var(--cream);
   transition: all 0.3s ease;
 }
 
 .dark-mode {
   background: var(--dark-bg);
-  color: var(--dark-muted);
+  color: var(--dark-text);
 }
 
 .dark {
@@ -51,8 +53,9 @@ body {
   --soft-lavender: var(--dark-surface);
   --primary-green: var(--dark-green);
   --secondary-green: var(--dark-accent);
-  --dark-charcoal: var(--dark-muted);
+  --charcoal-text: var(--dark-text);
   --light-sage: var(--dark-accent);
+  --accent-yellow: var(--dark-accent-yellow);
 }
 
 .container {

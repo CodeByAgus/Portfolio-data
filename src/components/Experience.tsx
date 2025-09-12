@@ -28,7 +28,7 @@ const Experience: React.FC = () => {
                   </div>
                   
                   <h3 className="text-2xl mb-2"
-                      style={{ color: 'var(--dark-charcoal)', fontFamily: 'var(--font-subtitle)' }}>
+                      style={{ color: 'var(--charcoal-text)', fontFamily: 'var(--font-subtitle)' }}>
                     Senior Data Analyst
                   </h3>
                   
@@ -38,7 +38,7 @@ const Experience: React.FC = () => {
                   </div>
                   
                   <p className="leading-relaxed text-sm"
-                     style={{ color: 'var(--dark-charcoal)' }}>
+                     style={{ color: 'var(--charcoal-text)' }}>
                     Lidero un equipo de 3 analistas desarrollando modelos predictivos para optimización 
                     de procesos. Implementé pipelines de datos que procesan 2TB+ diarios y creé 
                     dashboards ejecutivos que impactan decisiones estratégicas de C-level.
