@@ -6,34 +6,35 @@ const Contact: React.FC = () => {
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
     
-    // Configuración del email con EmailJS
+    // Configuración de EmailJS - Reemplaza estos valores con los reales de tu cuenta
+    const SERVICE_ID = 'YOUR_SERVICE_ID';
+    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    
+    // Si las credenciales no están configuradas, usar fallback directo
+    if (SERVICE_ID === 'YOUR_SERVICE_ID' || TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+      // Abrir cliente de email por defecto
+      window.location.href = 'mailto:agusmendoza436@gmail.com?subject=Consulta sobre oportunidades laborales - Data Analyst&body=Hola Agustina,%0D%0A%0D%0AMe pongo en contacto contigo porque...%0D%0A%0D%0A[Escribe tu mensaje aquí]%0D%0A%0D%0ASaludos cordiales.';
+      return;
+    }
+
+    // Configuración del email con EmailJS (solo si las credenciales están configuradas)
     const templateParams = {
       to_email: 'agusmendoza436@gmail.com',
       subject: 'Consulta sobre oportunidades laborales - Data Analyst',
       message: 'Hola Agustina,\n\nMe pongo en contacto contigo porque...\n\n[Escribe tu mensaje aquí]\n\nSaludos cordiales.'
     };
 
-    // NOTA: Para que esto funcione, necesitas:
-    // 1. Crear una cuenta en EmailJS (https://www.emailjs.com/)
-    // 2. Configurar un servicio de email (Gmail, Outlook, etc.)
-    // 3. Crear un template de email
-    // 4. Reemplazar 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID' y 'YOUR_PUBLIC_KEY' con tus valores reales
-    
-    emailjs.send(
-      'YOUR_SERVICE_ID',     // Reemplazar con tu Service ID
-      'YOUR_TEMPLATE_ID',    // Reemplazar con tu Template ID  
-      templateParams,
-      'YOUR_PUBLIC_KEY'      // Reemplazar con tu Public Key
-    )
-    .then((response) => {
-      console.log('Email enviado exitosamente!', response.status, response.text);
-      alert('¡Email enviado exitosamente!');
-    })
-    .catch((error) => {
-      console.error('Error al enviar email:', error);
-      // Fallback: abrir cliente de email por defecto
-      window.location.href = 'mailto:agusmendoza436@gmail.com?subject=Consulta sobre oportunidades laborales - Data Analyst&body=Hola Agustina,%0D%0A%0D%0AMe pongo en contacto contigo porque...%0D%0A%0D%0A[Escribe tu mensaje aquí]%0D%0A%0D%0ASaludos cordiales.';
-    });
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then((response) => {
+        console.log('Email enviado exitosamente!', response.status, response.text);
+        alert('¡Email enviado exitosamente!');
+      })
+      .catch((error) => {
+        console.error('Error al enviar email:', error);
+        // Fallback: abrir cliente de email por defecto
+        window.location.href = 'mailto:agusmendoza436@gmail.com?subject=Consulta sobre oportunidades laborales - Data Analyst&body=Hola Agustina,%0D%0A%0D%0AMe pongo en contacto contigo porque...%0D%0A%0D%0A[Escribe tu mensaje aquí]%0D%0A%0D%0ASaludos cordiales.';
+      });
   };
 
   const handleDownloadCV = () => {
