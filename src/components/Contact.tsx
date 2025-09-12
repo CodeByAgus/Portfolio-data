@@ -79,33 +79,31 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section relative">
+      <div className="geometric-bg"></div>
       <div className="container">
         <h2 className="section-title">¡Conectemos!</h2>
         
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-lg mb-10 opacity-80"
+          <p className="text-base mb-12 opacity-90 font-light leading-relaxed"
              style={{ color: 'var(--charcoal-text)' }}>
             Estoy siempre abierta a nuevos desafíos y oportunidades de colaboración. 
             Si tienes un proyecto emocionante o quieres charlar sobre datos y tecnología, no dudes en contactarme.
           </p>
           
-          <div className="flex justify-center gap-8 flex-wrap">
+          <div className="flex justify-center gap-6 flex-wrap">
             {contactLinks.map((link, index) => (
               <a key={index}
                  href={link.href}
                  target={link.href.startsWith('http') ? "_blank" : undefined}
                  rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
                  onClick={link.onClick}
-                 className="flex flex-col items-center p-5 rounded-2xl shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl min-w-28"
-                 style={{ 
-                   background: 'var(--cream)',
-                   color: 'var(--primary-green)'
-                 }}>
-                <div className="mb-3">
+                 className="card-minimal flex flex-col items-center min-w-28 group"
+                 style={{ color: 'var(--primary-green)' }}>
+                <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
                   {link.icon}
                 </div>
-                <span className="font-semibold text-sm">
+                <span className="font-medium text-sm tracking-wide">
                   {link.label}
                 </span>
               </a>

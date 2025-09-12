@@ -60,7 +60,8 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="section">
+    <section id="education" className="section relative">
+      <div className="geometric-bg"></div>
       <div className="container">
         <h2 className="section-title">Educación & Certificaciones</h2>
         
@@ -68,35 +69,34 @@ const Education: React.FC = () => {
           {education.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-6">
               {/* Category Header */}
-              <div className="flex items-center gap-3 pb-4 border-b-2"
+              <div className="flex items-center gap-4 pb-5 border-b"
                    style={{ borderColor: 'var(--light-sage)' }}>
                 <div style={{ color: 'var(--primary-green)' }}>
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold"
+                <h3 className="text-xl font-semibold tracking-tight"
                     style={{ 
                       color: 'var(--primary-green)',
-                      fontFamily: 'var(--font-subtitle)'
+                      fontFamily: "'Space Grotesk', sans-serif"
                     }}>
                   {category.category}
                 </h3>
               </div>
 
               {/* Items List */}
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {category.items.map((item, itemIndex) => (
                   <div key={itemIndex} 
-                       className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-lg transition-all duration-300 hover:shadow-md"
-                       style={{ background: 'var(--soft-lavender)' }}>
+                       className="card-minimal flex flex-col md:flex-row md:items-center justify-between gap-4">
                     
                     {/* Left side - Title and Institution */}
                     <div className="flex-1">
-                      <h4 className="font-semibold text-lg mb-1"
+                      <h4 className="font-semibold text-base mb-2 tracking-tight"
                           style={{ color: 'var(--charcoal-text)' }}>
                         {item.title}
                       </h4>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm">
-                        <span style={{ color: 'var(--secondary-green)' }}>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm font-light">
+                        <span style={{ color: 'var(--secondary-green)' }} className="font-medium">
                           {item.institution}
                         </span>
                         <span className="hidden sm:inline" style={{ color: 'var(--secondary-green)' }}>
@@ -115,7 +115,7 @@ const Education: React.FC = () => {
                         <a href={item.link}
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:shadow-lg"
+                           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg tracking-wide"
                            style={{ 
                              background: 'var(--primary-green)',
                              color: 'white'

@@ -48,48 +48,48 @@ const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="section"
+      className="section relative"
       style={{ background: 'var(--soft-lavender)' }}
     >
+      <div className="geometric-bg"></div>
       <div className="container">
-        <h2 className="section-title text-xl mb-6">Habilidades Técnicas</h2>
+        <h2 className="section-title">Habilidades Técnicas</h2>
 
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="rounded-xl p-4 shadow-md transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg text-center"
-                style={{ background: 'var(--cream)' }}
+                className="card-minimal text-center group"
               >
                 <div
-                  className="flex justify-center mb-4"
+                  className="flex justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
                   style={{ color: 'var(--primary-green)' }}
                 >
                   {skill.icon}
                 </div>
 
                 <h3
-                  className="text-lg font-bold mb-4"
+                  className="text-lg font-semibold mb-5 tracking-tight"
                   style={{
                     color: 'var(--primary-green)',
-                    fontFamily: 'var(--font-subtitle)'
+                    fontFamily: "'Space Grotesk', sans-serif"
                   }}
                 >
                   {skill.name}
                 </h3>
 
-                <ul className="text-left space-y-2">
+                <ul className="text-left space-y-3">
                   {skill.details.map((detail, detailIndex) => (
                     <li
                       key={detailIndex}
-                      className="flex items-start gap-2 text-xs"
+                      className="flex items-start gap-3 text-sm font-light"
                     >
                       <span
-                        className="w-1.5 h-1.5 rounded-full mt-1 flex-shrink-0"
+                        className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
                         style={{ background: 'var(--secondary-green)' }}
                       ></span>
-                      <span style={{ color: 'var(--charcoal-text)' }}>
+                      <span style={{ color: 'var(--charcoal-text)', lineHeight: '1.5' }}>
                         {detail}
                       </span>
                     </li>

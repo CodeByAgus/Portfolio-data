@@ -50,35 +50,37 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="section"
+    <section id="projects" className="section relative"
              style={{ background: 'var(--soft-lavender)' }}>
+      <div className="geometric-bg"></div>
       <div className="container">
         <h2 className="section-title">Proyectos Destacados</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {projects.map((project, index) => (
-            <div key={index} className="rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl"
-                 style={{ background: 'var(--cream)' }}>
+            <div key={index} className="card-minimal overflow-hidden group">
               
-              <div className="text-white p-8 text-center"
+              <div className="text-white p-6 text-center mb-6 rounded-2xl relative overflow-hidden"
                    style={{ background: 'linear-gradient(135deg, var(--primary-green), var(--secondary-green))' }}>
-                <div className="text-5xl mb-4">{project.icon}</div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'var(--font-subtitle)' }}>
+                <div className="absolute inset-0 bg-white opacity-5"></div>
+                <div className="text-4xl mb-3 relative z-10">{project.icon}</div>
+                <h3 className="text-lg font-semibold mb-1 relative z-10 tracking-tight" 
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                   {project.title}
                 </h3>
-                <p className="opacity-90 text-sm">{project.subtitle}</p>
+                <p className="opacity-90 text-sm font-light relative z-10">{project.subtitle}</p>
               </div>
               
-              <div className="p-8">
-                <p className="mb-5 leading-relaxed text-sm"
+              <div className="px-0">
+                <p className="mb-6 leading-relaxed text-sm font-light"
                    style={{ color: 'var(--charcoal-text)' }}>
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
                     <span key={techIndex}
-                          className="px-3 py-1 rounded-full text-xs font-medium"
+                          className="px-3 py-1.5 rounded-full text-xs font-medium tracking-wide"
                           style={{ 
                             background: 'var(--soft-lavender)',
                             color: 'var(--primary-green)'
@@ -92,7 +94,7 @@ const Projects: React.FC = () => {
                   {project.links.map((link, linkIndex) => (
                     <a key={linkIndex}
                        href={link.href}
-                       className="flex items-center gap-2 font-semibold transition-colors duration-300 hover:opacity-70"
+                       className="flex items-center gap-2 font-medium transition-all duration-300 hover:opacity-70 text-sm tracking-wide"
                        style={{ color: 'var(--primary-green)' }}>
                       {link.icon}
                       {link.text}
