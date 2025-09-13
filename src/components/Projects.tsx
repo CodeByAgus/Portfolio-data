@@ -60,18 +60,31 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div key={index} className="card-minimal overflow-hidden group">
               
-              <div className="text-white p-6 text-center mb-6 rounded-2xl relative overflow-hidden"
-                   style={{ background: 'linear-gradient(135deg, var(--primary-green), var(--secondary-green))' }}>
-                <div className="absolute inset-0 bg-white opacity-5"></div>
-                <div className="text-4xl mb-3 relative z-10">{project.icon}</div>
-                <h3 className="text-lg font-semibold mb-1 relative z-10 tracking-tight" 
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                  {project.title}
-                </h3>
-                <p className="opacity-90 text-sm font-light relative z-10">{project.subtitle}</p>
+              {/* Imagen del proyecto */}
+              <div className="relative mb-6 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center">
+                <div className="text-center p-4">
+                  <div className="text-4xl mb-2">{project.icon}</div>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-light">
+                    Aquí debes agregar una imagen del proyecto
+                  </p>
+                </div>
               </div>
               
-              <div className="px-0">
+              {/* Contenido del proyecto */}
+              <div>
+                <h3 className="text-xl font-semibold mb-2 tracking-tight" 
+                    style={{ 
+                      color: 'var(--primary-green)',
+                      fontFamily: "'Space Grotesk', sans-serif" 
+                    }}>
+                  {project.title}
+                </h3>
+                
+                <p className="text-sm font-medium mb-4 opacity-80"
+                   style={{ color: 'var(--secondary-green)' }}>
+                  {project.subtitle}
+                </p>
+                
                 <p className="mb-6 leading-relaxed text-sm font-light"
                    style={{ color: 'var(--charcoal-text)' }}>
                   {project.description}
@@ -82,7 +95,7 @@ const Projects: React.FC = () => {
                     <span key={techIndex}
                           className="px-3 py-1.5 rounded-full text-xs font-medium tracking-wide"
                           style={{ 
-                            background: 'var(--soft-lavender)',
+                            background: 'var(--light-sage)',
                             color: 'var(--primary-green)'
                           }}>
                       {tech}

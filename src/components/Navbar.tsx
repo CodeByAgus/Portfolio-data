@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 backdrop-blur-xl border-b border-opacity-10"
          style={{ 
-           background: 'rgba(255, 253, 247, 0.85)',
+           background: darkMode ? 'rgba(18, 18, 18, 0.85)' : 'rgba(255, 253, 247, 0.85)',
            borderColor: 'var(--primary-green)'
          }}>
       <div className="max-w-6xl mx-auto px-5 flex justify-between items-center">
@@ -37,6 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             { href: '#about', text: 'Sobre Mí' },
             { href: '#skills', text: 'Habilidades' },
             { href: '#projects', text: 'Proyectos' },
+            { href: '#experience', text: 'Experiencia' },
             { href: '#experience', text: 'Experiencia' },
             { href: '#contact', text: 'Contacto' }
           ].map((link) => (
