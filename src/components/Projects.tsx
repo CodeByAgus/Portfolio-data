@@ -93,7 +93,7 @@ const Projects: React.FC = () => {
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
                     <span key={techIndex}
-                          className="px-3 py-1.5 rounded-full text-xs font-medium tracking-wide"
+                          className="px-3 py-1.5 rounded-full text-xs font-medium tracking-wide dark:bg-gray-700 dark:text-gray-200"
                           style={{ 
                             background: 'var(--light-sage)',
                             color: 'var(--primary-green)'
