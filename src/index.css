@@ -125,7 +125,7 @@ body {
   background: var(--secondary-green);
   border-color: var(--secondary-green);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(95, 126, 77, 0.2);
+  box-shadow: 0 10px 25px rgba(95, 126, 77, 0.4);
 }
 
 .btn-primary:hover::before {
@@ -152,7 +152,7 @@ body {
   background: var(--primary-green);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(95, 126, 77, 0.15);
+  box-shadow: 0 10px 25px rgba(95, 126, 77, 0.3);
 }
 
 /* Geometric shapes for illustration effect */
@@ -200,7 +200,7 @@ body {
   background: var(--cream);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(95, 126, 77, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -225,7 +225,7 @@ body {
 
 .card-minimal:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(95, 126, 77, 0.12);
+  box-shadow: 0 20px 40px rgba(95, 126, 77, 0.25);
 }
 
 /* Responsive */
