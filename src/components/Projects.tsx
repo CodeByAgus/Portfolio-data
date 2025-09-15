@@ -26,17 +26,6 @@ const Projects: React.FC = () => {
       ]
     },
     {
-      icon: '🤖',
-      title: 'Automatización de Testing',
-      subtitle: 'Validación de formularios web con Python',
-      description: 'Desarrollo de un script en Python que automatiza pruebas de campos obligatorios y formatos en formularios. Genera reportes automáticos, optimizando procesos de QA y reduciendo errores manuales.',
-      tech: ['Python', 'Selenium', 'Pytest'],
-      links: [
-        { icon: <Github size={16} />, text: 'Código', href: '#' },
-        { icon: <FileText size={16} />, text: 'Doc', href: '#' }
-      ]
-    },
-    {
       icon: '🌦️',
       title: 'Análisis Climático',
       subtitle: 'Exploración de series temporales',
