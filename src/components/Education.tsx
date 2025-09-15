@@ -22,7 +22,7 @@ const Education: React.FC = () => {
         {
           title: 'Google Data Analytics Professional Certificate',
           institution: 'Google / Coursera',
-          year: '2025',
+          year: 'En curso',
           link: 'https://www.coursera.org/professional-certificates/google-data-analytics'
         },
         {
@@ -32,22 +32,10 @@ const Education: React.FC = () => {
           link: 'https://www.coderhouse.com'
         },
         {
-          title: 'Consultas Avanzadas con SQL',
-          institution: 'Fundaula',
-          year: '2025',
-          link: 'https://www.fundaula.com'
-        },
-        {
           title: 'Programación Inicial con Python',
-          institution: 'Talento Tech',
+          institution: 'Talento Tech', 
           year: '2025',
           link: 'https://www.talentotech.gob.ar'
-        },
-        {
-          title: 'Curso Intensivo de Data Analytics',
-          institution: 'Chicas en Tecnología',
-          year: '2025',
-          link: 'https://www.chicasentecnologia.org'
         },
         {
           title: 'Excel de Básico a Experto',
