@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
-import Education from './components/Education';
+import Education, { UniversityEducation } from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -37,7 +37,27 @@ function App() {
       <Hero />
       <Skills />
       <Projects />
-      <Experience />
+      
+      {/* Combined Experience and University Education Section */}
+      <section id="experience-education" className="section relative" style={{ background: 'var(--soft-lavender)' }}>
+        <div className="geometric-bg"></div>
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Left Column - University Education */}
+            <div>
+              <h2 className="section-title text-left mb-8">Educación Universitaria</h2>
+              <UniversityEducation />
+            </div>
+            
+            {/* Right Column - Experience */}
+            <div>
+              <h2 className="section-title text-left mb-8">Experiencia Profesional</h2>
+              <Experience />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <Education />
       <Contact />
       <Footer />

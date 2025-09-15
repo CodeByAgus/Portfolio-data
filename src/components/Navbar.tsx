@@ -18,13 +18,16 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 backdrop-blur-md"
-         style={{ background: 'var(--soft-lavender)' }}>
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 backdrop-blur-xl border-b border-opacity-10"
+         style={{ 
+           background: darkMode ? 'rgba(18, 18, 18, 0.85)' : 'rgba(255, 253, 247, 0.85)',
+           borderColor: 'var(--primary-green)'
+         }}>
       <div className="max-w-6xl mx-auto px-5 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold transition-colors duration-300"
+        <a href="#" className="text-xl font-semibold transition-colors duration-300 tracking-tight"
            style={{ 
              color: 'var(--primary-green)', 
-             fontFamily: 'var(--font-heading)'
+             fontFamily: "'Space Grotesk', sans-serif"
            }}>
           Agustina Mendoza
         </a>
@@ -35,14 +38,17 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             { href: '#skills', text: 'Habilidades' },
             { href: '#projects', text: 'Proyectos' },
             { href: '#experience', text: 'Experiencia' },
+            { href: '#education', text: 'Educación' },
             { href: '#contact', text: 'Contacto' }
           ].map((link) => (
             <li key={link.href}>
               <a href={link.href}
                  onClick={(e) => handleSmoothScroll(e, link.href)}
-                 className="font-medium transition-colors duration-300 hover:opacity-80"
-                 style={{ color: 'var(--dark-charcoal)' }}>
+                 className="font-medium transition-all duration-300 hover:opacity-80 text-sm tracking-wide relative group"
+                 style={{ color: 'var(--charcoal-text)' }}>
                 {link.text}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"
+                      style={{ background: 'var(--primary-green)' }}></span>
               </a>
             </li>
           ))}
@@ -50,8 +56,10 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
         
         <button 
           onClick={toggleDarkMode}
-          className="px-4 py-2 rounded-full text-white text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-0.5"
-          style={{ background: 'var(--primary-green)' }}>
+          className="px-5 py-2.5 rounded-full text-white text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-1 shadow-lg"
+          style={{ 
+            background: 'linear-gradient(135deg, var(--primary-green), var(--secondary-green))'
+          }}>
           {darkMode ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
         </button>
       </div>

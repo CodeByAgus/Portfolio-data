@@ -26,17 +26,6 @@ const Projects: React.FC = () => {
       ]
     },
     {
-      icon: '🤖',
-      title: 'Automatización de Testing',
-      subtitle: 'Validación de formularios web con Python',
-      description: 'Desarrollo de un script en Python que automatiza pruebas de campos obligatorios y formatos en formularios. Genera reportes automáticos, optimizando procesos de QA y reduciendo errores manuales.',
-      tech: ['Python', 'Selenium', 'Pytest'],
-      links: [
-        { icon: <Github size={16} />, text: 'Código', href: '#' },
-        { icon: <FileText size={16} />, text: 'Doc', href: '#' }
-      ]
-    },
-    {
       icon: '🌦️',
       title: 'Análisis Climático',
       subtitle: 'Exploración de series temporales',
@@ -50,37 +39,52 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="section"
+    <section id="projects" className="section relative"
              style={{ background: 'var(--soft-lavender)' }}>
+      <div className="geometric-bg"></div>
       <div className="container">
         <h2 className="section-title">Proyectos Destacados</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {projects.map((project, index) => (
-            <div key={index} className="rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl"
-                 style={{ background: 'var(--cream)' }}>
+            <div key={index} className="card-minimal overflow-hidden group">
               
-              <div className="text-white p-8 text-center"
-                   style={{ background: 'linear-gradient(135deg, var(--primary-green), var(--secondary-green))' }}>
-                <div className="text-5xl mb-4">{project.icon}</div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'var(--font-subtitle)' }}>
-                  {project.title}
-                </h3>
-                <p className="opacity-90 text-sm">{project.subtitle}</p>
+              {/* Imagen del proyecto */}
+              <div className="relative mb-6 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center">
+                <div className="text-center p-4">
+                  <div className="text-4xl mb-2">{project.icon}</div>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-light">
+                    Aquí debes agregar una imagen del proyecto
+                  </p>
+                </div>
               </div>
               
-              <div className="p-8">
-                <p className="mb-5 leading-relaxed text-sm"
-                   style={{ color: 'var(--dark-charcoal)' }}>
+              {/* Contenido del proyecto */}
+              <div>
+                <h3 className="text-xl font-semibold mb-2 tracking-tight" 
+                    style={{ 
+                      color: 'var(--primary-green)',
+                      fontFamily: "'Space Grotesk', sans-serif" 
+                    }}>
+                  {project.title}
+                </h3>
+                
+                <p className="text-sm font-medium mb-4 opacity-80"
+                   style={{ color: 'var(--secondary-green)' }}>
+                  {project.subtitle}
+                </p>
+                
+                <p className="mb-6 leading-relaxed text-sm font-light"
+                   style={{ color: 'var(--charcoal-text)' }}>
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
                     <span key={techIndex}
-                          className="px-3 py-1 rounded-full text-xs font-medium"
+                          className="px-3 py-1.5 rounded-full text-xs font-medium tracking-wide dark:bg-gray-700 dark:text-gray-200"
                           style={{ 
-                            background: 'var(--soft-lavender)',
+                            background: 'var(--light-sage)',
                             color: 'var(--primary-green)'
                           }}>
                       {tech}
@@ -92,7 +96,7 @@ const Projects: React.FC = () => {
                   {project.links.map((link, linkIndex) => (
                     <a key={linkIndex}
                        href={link.href}
-                       className="flex items-center gap-2 font-semibold transition-colors duration-300 hover:opacity-70"
+                       className="flex items-center gap-2 font-medium transition-all duration-300 hover:opacity-70 text-sm tracking-wide"
                        style={{ color: 'var(--primary-green)' }}>
                       {link.icon}
                       {link.text}
