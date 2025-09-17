@@ -2,19 +2,10 @@ import React from 'react';
 
 const Experience: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-      {/* Experiencia Profesional */}
+    <div className="w-full">
       <div className="flex justify-center">
-        <div className="card-minimal max-w-md w-full">
+        <div className="card-minimal max-w-md">
           <div className="text-center">
-            <h3 className="text-xl font-semibold mb-6 tracking-tight"
-                style={{
-                  color: 'var(--primary-green)',
-                  fontFamily: "'Space Grotesk', sans-serif",
-                }}>
-              Experiencia Profesional
-            </h3>
-            
             <div
               className="font-medium text-sm mb-3 tracking-wide"
               style={{ color: 'var(--primary-green)' }}
@@ -22,7 +13,7 @@ const Experience: React.FC = () => {
               Junio 2025 - Presente
             </div>
 
-            <h4
+            <h3
               className="text-2xl mb-3 font-semibold tracking-tight"
               style={{
                 color: 'var(--charcoal-text)',
@@ -30,7 +21,7 @@ const Experience: React.FC = () => {
               }}
             >
               Pasante Analisis de Datos
-            </h4>
+            </h3>
 
             <div
               className="font-medium mb-6 text-lg"
@@ -50,40 +41,29 @@ const Experience: React.FC = () => {
           </div>
         </div>
       </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Educación Universitaria */}
-      <div className="flex justify-center">
-        <div className="card-minimal max-w-md w-full">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-6 tracking-tight"
-                style={{
-                  color: 'var(--primary-green)',
-                  fontFamily: "'Space Grotesk', sans-serif",
-                }}>
-              Educación Universitaria
-            </h3>
-            
-            <div
-              className="font-medium text-sm mb-2 tracking-wide"
-              style={{ color: 'var(--primary-green)' }}
-            >
-              2024 - Actualidad
-            </div>
-
-            <h4
-              className="text-xl mb-2 font-semibold"
+      {/* Sección de Educación */}
+      <div className="mt-16 flex justify-center">
+        <div className="max-w-md text-center">
+          <h3 className="text-xl font-semibold mb-8 tracking-tight"
               style={{
-                color: 'var(--charcoal-text)',
+                color: 'var(--primary-green)',
                 fontFamily: "'Space Grotesk', sans-serif",
-              }}
-            >
-              Licenciatura en Ciencia de Datos
-            </h4>
+              }}>
+            Educación Universitaria
+          </h3>
+          
+          <div
+            className="font-medium text-sm mb-2 tracking-wide"
+            style={{ color: 'var(--primary-green)' }}
+          >
+            2024 - Actualidad
+          </div>
 
-        </p>
+          <h4
+            className="text-xl mb-2 font-semibold"
+            style={{
+              color: 'var(--charcoal-text)',
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >

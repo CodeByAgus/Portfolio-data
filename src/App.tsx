@@ -1,113 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-const Experience: React.FC = () => {
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setDarkMode(savedDarkMode);
+  }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('darkMode', darkMode.toString());
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-      {/* Experiencia Profesional */}
-      <div className="flex justify-center">
-        <div className="card-minimal max-w-md w-full">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-6 tracking-tight"
-                style={{
-                  color: 'var(--primary-green)',
-                  fontFamily: "'Space Grotesk', sans-serif",
-                }}>
-              Experiencia Profesional
-            </h3>
-            
-            <div
-              className="font-medium text-sm mb-3 tracking-wide"
-              style={{ color: 'var(--primary-green)' }}
-            >
-              Junio 2025 - Presente
+    <div className="App">
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Hero />
+      <Skills />
+      <Projects />
+    
+      <section id="experience-education" className="section relative" style={{ background: 'var(--soft-lavender)' }}>
+        <div className="geometric-bg"></div>
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+ <h3 className="section-title text-left mb-8">Experiencia Profesional</h3>
+              
+              <Experience />
+             
             </div>
-
-            <h4
-              className="text-2xl mb-3 font-semibold tracking-tight"
-              style={{
-                color: 'var(--charcoal-text)',
-                fontFamily: "'Space Grotesk', sans-serif",
-              }}
-            >
-              Pasante Analisis de Datos
-            </h4>
-
-            <div
-              className="font-medium mb-6 text-lg"
-              style={{ color: 'var(--secondary-green)' }}
-            >
-              Artech - Fundacion Pescar 
+            <div className="container mx-auto">
             </div>
-
-            <p
-              className="leading-relaxed text-base font-light"
-              style={{ color: 'var(--charcoal-text)' }}
-            >
-              Lidero un equipo de 3 analistas desarrollando modelos predictivos para optimización
-              de procesos. Implementé pipelines de datos que procesan 2TB+ diarios y creé
-              dashboards ejecutivos que impactan decisiones estratégicas de C-level.
-            </p>
           </div>
         </div>
-      </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Educación Universitaria */}
-      <div className="flex justify-center">
-        <div className="card-minimal max-w-md w-full">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-6 tracking-tight"
-                style={{
-                  color: 'var(--primary-green)',
-                  fontFamily: "'Space Grotesk', sans-serif",
-                }}>
-              Educación Universitaria
-            </h3>
-            
-            <div
-              className="font-medium text-sm mb-2 tracking-wide"
-              style={{ color: 'var(--primary-green)' }}
-            >
-              2024 - Actualidad
-            </div>
-
-            <h4
-              className="text-xl mb-2 font-semibold"
-              style={{
-                color: 'var(--charcoal-text)',
-                fontFamily: "'Space Grotesk', sans-serif",
-              }}
-            >
-              Licenciatura en Ciencia de Datos
-            </h4>
-
-              fontFamily: "'Space Grotesk', sans-serif",
-            }}
-          >
-            Licenciatura en Ciencia de Datos
-          </h4>
-
-          <div
-            className="font-medium mb-4 text-lg"
-            style={{ color: 'var(--secondary-green)' }}
-          >
-            Universidad de Buenos Aires
-          </div>
-
-          <p
-            className="leading-relaxed text-base font-light"
-            style={{ color: 'var(--charcoal-text)' }}
-          >
-            Formación integral en análisis de datos, estadística, machine learning y programación.
-            Desarrollo competencias en Python, R, SQL y herramientas de visualización para resolver
-            problemas complejos mediante el análisis de datos.
-          </p>
-        </div>
-      </div>
+      </section>
+      
+      <Education />
+      <Contact />
+      <Footer />
     </div>
   );
-};
+}
 
-export default Experience;
+export default App;
