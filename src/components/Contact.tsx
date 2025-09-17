@@ -7,12 +7,12 @@ const Contact: React.FC = () => {
     e.preventDefault();
     
     // Configuración de EmailJS - Reemplaza estos valores con los reales de tu cuenta
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
+    const SERVICE_ID = 'service_cs6wfau';
     const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    const PUBLIC_KEY = 'T5MYdPMBKqGuiNjbR';
     
     // Si las credenciales no están configuradas, usar fallback directo
-    if (SERVICE_ID === 'YOUR_SERVICE_ID' || TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+    if (SERVICE_ID === 'service_cs6wfau' || TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || PUBLIC_KEY === 'T5MYdPMBKqGuiNjbR' ) {
       // Abrir cliente de email por defecto
       window.location.href = 'mailto:agusmendoza436@gmail.com?subject=Consulta sobre oportunidades laborales - Data Analyst&body=Hola Agustina,%0D%0A%0D%0AMe pongo en contacto contigo porque...%0D%0A%0D%0A[Escribe tu mensaje aquí]%0D%0A%0D%0ASaludos cordiales.';
       return;
@@ -62,13 +62,13 @@ const Contact: React.FC = () => {
       icon: <Linkedin size={32} />,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/mendozaagus',
-      onClick: null
+      onClick: undefined
     },
     {
       icon: <Github size={32} />,
       label: 'GitHub',
       href: 'https://github.com/CodeByAgus',
-      onClick: null
+      onClick: undefined
     },
     {
       icon: <Download size={32} />,
