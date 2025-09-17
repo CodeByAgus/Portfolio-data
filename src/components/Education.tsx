@@ -1,40 +1,6 @@
 import React from 'react';
 import { ExternalLink, Award } from 'lucide-react';
 
-// 👉 Este componente se usará en la sección combinada de experiencia y educación
-export const UniversityEducation: React.FC = () => {
-  return (
-    <div className="card-minimal w-full">
-      <div className="text-center">
-        <div className="font-medium text-sm mb-3 tracking-wide" style={{ color: 'var(--primary-green)' }}>
-          2024 - Actualidad
-        </div>
-
-        <h3
-          className="text-2xl mb-3 font-semibold tracking-tight"
-          style={{
-            color: 'var(--charcoal-text)',
-            fontFamily: "'Space Grotesk', sans-serif",
-          }}
-        >
-          Licenciatura en Ciencia de Datos
-        </h3>
-
-        <div className="font-medium mb-6 text-lg" style={{ color: 'var(--secondary-green)' }}>
-          Universidad de Buenos Aires
-        </div>
-
-        <p className="leading-relaxed text-base font-light" style={{ color: 'var(--charcoal-text)' }}>
-          Formación integral en análisis de datos, estadística, machine learning y programación.
-          Desarrollando competencias en Python, R, SQL y herramientas de visualización para
-          resolver problemas complejos mediante el análisis de datos.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-// 👉 Este componente se mantiene como sección separada para certificaciones
 const Education: React.FC = () => {
   const certifications = [
     {
@@ -46,19 +12,19 @@ const Education: React.FC = () => {
     {
       title: 'Testing QA Manual',
       institution: 'Coderhouse',
-      year: '2023',
+      year: '2024',
       link: 'https://www.coderhouse.com/certificados/qa-manual',
     },
     {
       title: 'Programación Inicial con Python',
       institution: 'Talento Tech',
-      year: '2023',
+      year: '2025',
       link: 'https://talentotech.ar/python-inicial',
     },
     {
       title: 'Excel de Básico a Experto',
       institution: 'Udemy',
-      year: '2022',
+      year: '2025',
       link: 'https://www.udemy.com/course/excel-basico-a-avanzado/',
     },
   ];
@@ -74,7 +40,7 @@ const Education: React.FC = () => {
           </h3>
           <ul className="space-y-4">
             {certifications.map((cert, index) => (
-              <li key={index} className="border-l-4 pl-4 border-green-500">
+              <li key={index} className="border-l-4 pl-4 border--primary-green:;">
                 <div className="text-lg font-medium">{cert.title}</div>
                 <div className="text-sm text-gray-600">
                   {cert.institution} — {cert.year}

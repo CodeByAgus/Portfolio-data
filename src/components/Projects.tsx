@@ -1,14 +1,14 @@
 import React from 'react';
-import { Github, ExternalLink, FileText, BarChart3, Presentation } from 'lucide-react';
+import { Github, ExternalLink, BarChart3, Presentation } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
     {
       icon: '📊',
-      title: 'Dashboard de Ventas Retail',
-      subtitle: 'Análisis de métricas comerciales',
-      description: 'Creación de un dashboard interactivo en Power BI para visualizar productos más vendidos, períodos de mayor demanda y ticket promedio. Permite filtrar y explorar datos para apoyar decisiones estratégicas.',
-      tech: ['Power BI', 'SQL', 'DAX'],
+      title: 'Dashboard de Empleabilidad',
+      subtitle: 'Análisis de censos y mercado laboral',
+      description: 'Dashboard informativo en Tableau sobre el desempleo en dos provincias, con distinción de género y observación de los beneficios del empleo.',
+      tech: ['Tableau', 'Excel'],
       links: [
         { icon: <Github size={16} />, text: 'Código', href: '#' },
         { icon: <ExternalLink size={16} />, text: 'Demo', href: '#' }
@@ -45,15 +45,25 @@ const Projects: React.FC = () => {
       <div className="container">
         <h2 className="section-title">Proyectos Destacados</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
           {projects.map((project, index) => (
-            <div key={index} className="card-minimal overflow-hidden group">
-              
+            <div
+              key={index}
+              className="card-minimal overflow-hidden group"
+              style={{
+                padding: '1rem',
+                minHeight: '260px',
+                maxWidth: '340px',
+                margin: '0 auto'
+              }}
+            >
               {/* Imagen del proyecto */}
-              <div className="relative mb-6 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 h-48 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <div className="text-4xl mb-2">{project.icon}</div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 font-light">
+              <div
+                className="relative mb-3 rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-700 h-28 flex items-center justify-center"
+              >
+                <div className="text-center p-2">
+                  <div className="text-3xl mb-1">{project.icon}</div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 font-light">
                     Aquí debes agregar una imagen del proyecto
                   </p>
                 </div>
@@ -61,43 +71,53 @@ const Projects: React.FC = () => {
               
               {/* Contenido del proyecto */}
               <div>
-                <h3 className="text-xl font-semibold mb-2 tracking-tight" 
-                    style={{ 
-                      color: 'var(--primary-green)',
-                      fontFamily: "'Space Grotesk', sans-serif" 
-                    }}>
+                <h3
+                  className="text-lg font-semibold mb-1 tracking-tight"
+                  style={{
+                    color: 'var(--primary-green)',
+                    fontFamily: "'Space Grotesk', sans-serif"
+                  }}
+                >
                   {project.title}
                 </h3>
                 
-                <p className="text-sm font-medium mb-4 opacity-80"
-                   style={{ color: 'var(--secondary-green)' }}>
+                <p
+                  className="text-xs font-medium mb-2 opacity-80"
+                  style={{ color: 'var(--secondary-green)' }}
+                >
                   {project.subtitle}
                 </p>
                 
-                <p className="mb-6 leading-relaxed text-sm font-light"
-                   style={{ color: 'var(--charcoal-text)' }}>
+                <p
+                  className="mb-3 leading-relaxed text-xs font-light"
+                  style={{ color: 'var(--charcoal-text)' }}
+                >
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1 mb-3">
                   {project.tech.map((tech, techIndex) => (
-                    <span key={techIndex}
-                          className="px-3 py-1.5 rounded-full text-xs font-medium tracking-wide dark:bg-gray-700 dark:text-gray-200"
-                          style={{ 
-                            background: 'var(--light-sage)',
-                            color: 'var(--primary-green)'
-                          }}>
+                    <span
+                      key={techIndex}
+                      className="px-2 py-1 rounded-full text-xs font-medium tracking-wide dark:bg-gray-700 dark:text-gray-200"
+                      style={{
+                        background: 'var(--light-sage)',
+                        color: 'var(--primary-green)'
+                      }}
+                    >
                       {tech}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex gap-4">
+                <div className="flex gap-2">
                   {project.links.map((link, linkIndex) => (
-                    <a key={linkIndex}
-                       href={link.href}
-                       className="flex items-center gap-2 font-medium transition-all duration-300 hover:opacity-70 text-sm tracking-wide"
-                       style={{ color: 'var(--primary-green)' }}>
+                    <a
+                      key={linkIndex}
+                      href={link.href}
+                      className="flex items-center gap-1 font-medium transition-all duration-300 hover:opacity-70 text-xs tracking-wide"
+                      style={{ color: 'var(--primary-green)' }}
+                    >
                       {link.icon}
                       {link.text}
                     </a>
