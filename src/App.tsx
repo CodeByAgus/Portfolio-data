@@ -41,20 +41,20 @@ function App() {
       <section id="experience-education" className="section relative" style={{ background: 'var(--soft-lavender)' }}>
         <div className="geometric-bg"></div>
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="flex flex-col md:flex-row gap-12 justify-center items-start max-w-6xl mx-auto">
             <div>
  <h3 className="section-title text-left mb-8">Experiencia Profesional</h3>
               
               <Experience />
              
             </div>
-            <div className="container mx-auto">
+            <div>
+              <h3 className="section-title text-left mb-8">Educación</h3>
+              <Education />
             </div>
           </div>
         </div>
       </section>
-      
-      <Education />
       <Contact />
       <Footer />
     </div>
