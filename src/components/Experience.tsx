@@ -50,6 +50,9 @@ const Experience: React.FC = () => {
           </div>
         </div>
       </div>
+          </div>
+        </div>
+      </div>
 
       {/* Educación Universitaria */}
       <div className="flex justify-center">
