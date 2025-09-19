@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
 
   const handleDownloadCV = () => {
     // Ruta donde debe estar ubicado tu CV (ver explicación abajo)
-    const cvUrl = '/assets/CV-Agustina-Mendoza.pdf';
+    const cvUrl = '/Public/CV-Agustina-Mendoza.pdf';
     
     // Crear un enlace temporal para descargar
     const link = document.createElement('a');
