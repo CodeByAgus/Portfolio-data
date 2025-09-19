@@ -15,14 +15,13 @@ const Projects: React.FC = () => {
       image: 'empleabilidad-dashboard.png' // Coloca esta imagen en: Proyect1.png
     },
     {
-      icon: '🎓',
-      title: 'Dashboard Educativo',
-      subtitle: 'Visualización de indicadores académicos',
-      description: 'Construcción de un dashboard en Tableau que muestra evolución del rendimiento estudiantil, tasas de aprobación y asistencia. Transformación de datos dispersos en insights claros para la mejora pedagógica y toma de decisiones.',
-      tech: ['PowerBI', 'Excel', 'SQL'],
+      icon: '💼',
+      title: 'Dashboard Clima Laboral',
+      subtitle: 'Satisfacción y bienestar organizacional',
+      description: 'Visualización de encuestas de clima laboral y satisfacción, con métricas de compromiso y ambiente de trabajo para apoyar decisiones de gestión de talento.',
+      tech: ['PowerBI', 'Excel'],
       links: [
-        { icon: <Github size={16} />, text: 'Código', href: '#' },
-        { icon: <Presentation size={16} />, text: 'Slides', href: '#' }
+      { icon: <Presentation size={16} />, text: 'PowerBI', href: 'https://app.fabric.microsoft.com/view?r=eyJrIjoiYWMxZjQyNjItNGUzOS00ZGFmLWI5NjItNmNlODc1NDQzYmI0IiwidCI6IjgxNzQ3YmU0LTBhNjQtNDU2NS04Y2NlLWE5MGNkODNkZGI4MSIsImMiOjR9' }
       ],
       image: 'dashboard-educativo.jpg' // Coloca esta imagen en: public/images/projects/dashboard-educativo.jpg
     },
