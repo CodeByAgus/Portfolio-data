@@ -3,7 +3,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <footer
-      className="text-center py-10 mt-20 relative overflow-hidden bg-gradient-to-br from-[var(--primary-green)] to-[var(--secondary-green)] dark:from-gray-900 dark:to-gray-800"
+     className="text-center py-10 mt-20 relative overflow-hidden bg-gradient-to-br from-[var(--primary-green)] to-[var(--secondary-green)] dark:bg-[var(--darkbg)]"
     >
       <div className="absolute inset-0 bg-white opacity-5 dark:bg-black dark:opacity-10"></div>
       <div className="container">

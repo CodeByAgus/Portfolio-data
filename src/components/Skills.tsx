@@ -7,40 +7,40 @@ const Skills: React.FC = () => {
       name: 'SQL',
       icon: <Database size={30} />, // más chico
       details: [
-        'Consultas complejas y optimización',
-        'Stored procedures y funciones',
-        'Análisis de rendimiento de BD',
-        'PostgreSQL, MySQL, SQL Server'
+        'Consultas básicas y filtrado de datos',
+        'Creación y modificación de tablas',
+        'Joins básicos y subconsultas',
+        'Comprensión de índices y claves primarias'
       ]
     },
     {
       name: 'Power BI',
       icon: <BarChart3 size={30} />,
       details: [
-        'Dashboards interactivos',
-        'Modelado de datos con DAX',
-        'Reportes automatizados',
-        'Integración con múltiples fuentes'
+        'Conexión con fuentes de datos comunes (Excel, CSV)',
+        'Creación de dashboards',
+        'Familiaridad con Power Query para transformación de datos',
+        'Visualización de KPIs'
       ]
     },
     {
       name: 'Python',
       icon: <Code size={30} />,
       details: [
-        'Pandas y NumPy para análisis',
-        'Machine Learning con Scikit-learn',
-        'Visualización con Matplotlib',
-        'Automatización de procesos'
+        'Manejo básico de listas y diccionarios en Python',
+        'Importación y limpieza de datos con Pandas',
+        'Exploración de datasets con Python',
+        'Introducción a la manipulación de datos con NumPy'
       ]
     },
     {
       name: 'Excel',
       icon: <FileSpreadsheet size={30} />,
       details: [
-        'Análisis avanzado con tablas dinámicas',
-        'Macros y automatización VBA',
-        'Modelado financiero',
-        'Visualizaciones y gráficos'
+        'Organización de datos con filtros y ordenamientos',
+        'Introducción a las tablas dinámicas',
+        'Creación de gráficos (barras, líneas, etc.)',
+        'Uso de fórmulas para análisis sencillo'
       ]
     }
   ];

@@ -3,8 +3,8 @@ import React from 'react';
 const Experience: React.FC = () => {
   return (
     <div className="w-full">
-      <div className="flex"> {/* Contenedor flex para alinear las secciones */}
-        <div className="w-1/2 pr-4"> {/* Ancho para la sección de experiencia */}
+      <div className="flex flex-col md:flex-row"> {/* Contenedor flex responsive */}
+        <div className="w-full md:w-1/2 md:pr-4 mb-8 md:mb-0"> {/* Ancho para la sección de experiencia */}
           <div className="flex justify-center">
             <div className="card-minimal max-w-md">
               <div className="text-center">
@@ -36,9 +36,8 @@ const Experience: React.FC = () => {
                   className="leading-relaxed text-base font-light"
                   style={{ color: 'var(--charcoal-text)' }}
                 >
-                  Lidero un equipo de 3 analistas desarrollando modelos predictivos para optimización
-                  de procesos. Implementé pipelines de datos que procesan 2TB+ diarios y creé
-                  dashboards ejecutivos que impactan decisiones estratégicas de C-level.
+                  Pasantía con formación y participación en proyectos orientados a la inserción laboral en el sector IT. Se realizaron proyectos aplicando tecnologías como SQL, Power BI, Python, Databricks y PowerApps, junto con el desarrollo de habilidades socioemocionales y trabajo colaborativo.
+
                 </p>
               </div>
             </div>
@@ -46,7 +45,7 @@ const Experience: React.FC = () => {
         </div>
 
         {/* Sección de Educación */}
-        <div className="mt-16 w-1/2 pl-4 items-start"> {/* Ancho para la sección de educación */}
+        <div className="w-full md:w-1/2 md:pl-4 items-start"> {/* Removido mt-16 y agregadas clases responsive */}
           <div className="max-w-md text-left">
             <h3 className="text-xl font-semibold mb-8 tracking-tight"
               style={{
@@ -83,9 +82,7 @@ const Experience: React.FC = () => {
               className="leading-relaxed text-base font-light"
               style={{ color: 'var(--charcoal-text)' }}
             >
-              Formación integral en análisis de datos, estadística, machine learning y programación.
-              Desarrollo competencias en Python, R, SQL y herramientas de visualización para resolver
-              problemas complejos mediante el análisis de datos.
+              La Licenciatura en Ciencia de Datos de la UBA forma profesionales capaces de analizar, interpretar y extraer valor de grandes volúmenes de datos. El egresado está preparado para aplicar herramientas estadísticas, algoritmos de machine learning y técnicas de visualización para resolver problemas en diversos sectores como la industria, la salud y el comercio.
             </p>
           </div>
         </div>

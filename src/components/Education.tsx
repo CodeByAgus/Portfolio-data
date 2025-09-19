@@ -13,7 +13,7 @@ const Education: React.FC = () => {
       title: 'Programación Inicial con Python',
       institution: 'Talento Tech',
       year: '2025',
-      link: 'https://talentotech.ar/python-inicial',
+      link: 'https://drive.google.com/file/d/19aIMNXrT_7AOXyQDGfGw7mcyaLFJJo4k/view?usp=sharing',
     },
     {
       title: 'Excel de Básico a Experto',
@@ -25,7 +25,7 @@ const Education: React.FC = () => {
       title: 'Testing QA Manual',
       institution: 'Coderhouse',
       year: '2024',
-      link: 'https://drive.google.com/drive/folders/1HIjjwFsee3TTmzRhdMMB7BPwnuo3YFa6',
+      link: 'https://drive.google.com/file/d/1gkCIp-pBkA5CriQ5HKVFNdLlnWU0Ca_8/view?usp=sharing',
     },
   ];
 
