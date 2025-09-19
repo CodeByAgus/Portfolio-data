@@ -5,7 +5,7 @@ const Skills: React.FC = () => {
   const skills = [
     {
       name: 'SQL',
-      icon: <Database size={36} />, // más chico
+      icon: <Database size={30} />, // más chico
       details: [
         'Consultas complejas y optimización',
         'Stored procedures y funciones',
@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
     },
     {
       name: 'Power BI',
-      icon: <BarChart3 size={36} />,
+      icon: <BarChart3 size={30} />,
       details: [
         'Dashboards interactivos',
         'Modelado de datos con DAX',
@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
     },
     {
       name: 'Python',
-      icon: <Code size={36} />,
+      icon: <Code size={30} />,
       details: [
         'Pandas y NumPy para análisis',
         'Machine Learning con Scikit-learn',
@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
     },
     {
       name: 'Excel',
-      icon: <FileSpreadsheet size={36} />,
+      icon: <FileSpreadsheet size={30} />,
       details: [
         'Análisis avanzado con tablas dinámicas',
         'Macros y automatización VBA',

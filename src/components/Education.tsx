@@ -7,13 +7,7 @@ const Education: React.FC = () => {
       title: 'Google Data Analytics Professional Certificate',
       institution: 'Google / Coursera',
       year: 'En curso',
-      link: 'https://www.coursera.org/professional-certificates/google-data-analytics',
-    },
-    {
-      title: 'Testing QA Manual',
-      institution: 'Coderhouse',
-      year: '2024',
-      link: 'https://www.coderhouse.com/certificados/qa-manual',
+      link: 'https://drive.google.com/drive/u/0/folders/1SXxEadDg3fOKPsiF918Id02iFUquvd_P?q=sharedwith:public%20parent:1HIjjwFsee3TTmzRhdMMB7BPwnuo3YFa6',
     },
     {
       title: 'Programación Inicial con Python',
@@ -25,7 +19,13 @@ const Education: React.FC = () => {
       title: 'Excel de Básico a Experto',
       institution: 'Udemy',
       year: '2025',
-      link: 'https://www.udemy.com/course/excel-basico-a-avanzado/',
+      link: 'https://drive.google.com/file/d/1knx6BSGhjWVItSLYaGyyOs7ZF-oPQ29w/view?usp=sharing',
+    },
+     {
+      title: 'Testing QA Manual',
+      institution: 'Coderhouse',
+      year: '2024',
+      link: 'https://drive.google.com/drive/folders/1HIjjwFsee3TTmzRhdMMB7BPwnuo3YFa6',
     },
   ];
 
@@ -33,7 +33,7 @@ const Education: React.FC = () => {
     <section id="education" className="section relative" style={{ background: 'var(--soft-lavender)' }}>
       <div className="geometric-bg" />
       <div className="container">
-        <h2 className="section-title">Certificaciones Profesionales</h2>
+        <h2 className="section-title">Certificaciones </h2>
         <div className="card-minimal w-full">
           <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <Award size={20} /> Cursos y Certificados

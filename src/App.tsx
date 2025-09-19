@@ -37,21 +37,14 @@ function App() {
       <Hero />
       <Skills />
       <Projects />
-    
-      <section id="experience-education" className="section relative" style={{ background: 'var(--soft-lavender)' }}>
+       <section id="experience" className="section relative" style={{ background: 'var(--soft-lavender)' }}>
         <div className="geometric-bg"></div>
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <h3 className="section-title text-left mb-8">Experiencia Profesional</h3>
             <div>
- <h3 className="section-title text-left mb-8">Experiencia Profesional</h3>
-              
               <Experience />
-             
-            </div>
-            <div className="container mx-auto">
             </div>
           </div>
-        </div>
       </section>
       
       <Education />
