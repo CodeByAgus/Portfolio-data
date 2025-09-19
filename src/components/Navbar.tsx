@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             { href: '#skills', text: 'Habilidades' },
             { href: '#projects', text: 'Proyectos' },
             { href: '#experience', text: 'Experiencia' },
-            { href: '#education', text: 'Educación' },
+            { href: '#education', text: 'Certificaciones' },
             { href: '#contact', text: 'Contacto' }
           ].map((link) => (
             <li key={link.href}>
